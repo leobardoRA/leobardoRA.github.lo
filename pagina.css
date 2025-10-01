@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #5a068a; /* Fondo gris claro */
+  color: #333;         /* Texto gris oscuro */
+  line-height: 2.6;    /* Mejor legibilidad */
+}
+
+/* ==== HEADER ==== */
+header {
+  width: 100%;
+  height: 500px;
+  background-image: url('./Dragon.jpg'); /* Imagen de portada */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65); /* Capa oscura encima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3.5rem;   /* Título principal grande */
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;  /* Foto de perfil redonda */
+  margin: 20px 0;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.card img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* ==== SECCIÓN PRINCIPAL ==== */
+main {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;    /* Se acomoda en varias filas */
+  justify-content: center;
+  gap: 40px;          /* Espacio entre tarjetas */
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombras suaves */
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px; /* Bordes redondeados */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px); /* Efecto de flotación */
+  box-shadow: 0 12px 25px rgba(160, 56, 146, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card ul {
+  list-style: none; /* Quita los puntos */
+}
+
+.card li {
+  margin: 8px 0;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #111;   /* Fondo negro */
+  color: #ffffff;
+}
+
+footer form {
+  margin-bottom: 15px;
+}
+
+footer input {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 220px;      /* Campo de correo */
+}
+
+footer button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: crimson; /* Botón rojo */
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background: darkred; /* Botón rojo oscuro al pasar */
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Tarjetas en columna en móviles */
+    align-items: center;
+  }
+}
+
